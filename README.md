@@ -66,7 +66,7 @@ So‘ngra `00 - Kurs haqida/README.md` faylini o‘qing va 1-bo‘limdan boshlan
 ## 💬 Muallif
 
 - 👤 **Ilyas Sultanov**
-- 💼 Software Engineer | Python Developer | CyberSecurity Enthusiast
+- 💼 Software Engineer | CyberSecurity Enthusiast
 - 🌍 GitHub: [github.com/therealilyas](https://github.com/therealilyas)
 
 ---
@@ -79,3 +79,4 @@ So‘ngra `00 - Kurs haqida/README.md` faylini o‘qing va 1-bo‘limdan boshlan
 
 
 ---
+
