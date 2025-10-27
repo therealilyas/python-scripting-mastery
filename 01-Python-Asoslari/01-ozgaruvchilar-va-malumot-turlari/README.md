@@ -3,10 +3,9 @@
 
 ### Mundarija
 
-1. [O'zgaruvchilar va asosiy ma'lumot turlari](./nazariya.md)
-2. [Misollar](./misollar/README.md)
-3. [Loyihalar](./loyihalar/README.md)
-4. [Savol-Javob](./savol-javob.md)
+1. [Misollar](./misollar/README.md)
+2. [Loyihalar](./loyihalar/README.md)
+3. [Savol-Javob](./savol-javob.md)
 
 ---
 ## 🎯 Mavzu maqsadi
