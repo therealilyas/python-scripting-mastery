@@ -843,3 +843,642 @@ result = a + ((b * (c ** d)) / e)
 ```
 
 ---
+
+## 💡 MISOLLAR
+
+### 01 - Oddiy misollar
+
+```python
+# 01-oddiy-misollar.py
+
+"""
+OPERATORLAR - ODDIY MISOLLAR
+Barcha operator turlarining sodda misollari
+"""
+
+print("="*60)
+print(" "*20 + "OPERATORLAR")
+print("="*60 + "\n")
+
+# 1. ARIFMETIK OPERATORLAR
+print("1. ARIFMETIK OPERATORLAR\n")
+
+a = 15
+b = 4
+
+print(f"a = {a}, b = {b}\n")
+print(f"a + b = {a + b}")
+print(f"a - b = {a - b}")
+print(f"a * b = {a * b}")
+print(f"a / b = {a / b:.2f}")
+print(f"a // b = {a // b}")
+print(f"a % b = {a % b}")
+print(f"a ** b = {a ** b}")
+
+print("\n" + "="*60 + "\n")
+
+# 2. TAQQOSLASH OPERATORLARI
+print("2. TAQQOSLASH OPERATORLARI\n")
+
+x = 10
+y = 20
+
+print(f"x = {x}, y = {y}\n")
+print(f"x == y: {x == y}")
+print(f"x != y: {x != y}")
+print(f"x > y: {x > y}")
+print(f"x < y: {x < y}")
+print(f"x >= y: {x >= y}")
+print(f"x <= y: {x <= y}")
+
+print("\n" + "="*60 + "\n")
+
+# 3. MANTIQIY OPERATORLAR
+print("3. MANTIQIY OPERATORLAR\n")
+
+p = True
+q = False
+
+print(f"p = {p}, q = {q}\n")
+print(f"p and q: {p and q}")
+print(f"p or q: {p or q}")
+print(f"not p: {not p}")
+print(f"not q: {not q}")
+
+print("\n" + "="*60 + "\n")
+
+# 4. ASSIGNMENT OPERATORLAR
+print("4. ASSIGNMENT OPERATORLAR\n")
+
+num = 10
+print(f"Boshlang'ich qiymat: {num}")
+
+num += 5
+print(f"num += 5: {num}")
+
+num -= 3
+print(f"num -= 3: {num}")
+
+num *= 2
+print(f"num *= 2: {num}")
+
+num /= 4
+print(f"num /= 4: {num}")
+
+print("\n" + "="*60 + "\n")
+
+# 5. MEMBERSHIP OPERATORLAR
+print("5. MEMBERSHIP OPERATORLAR\n")
+
+royxat = [1, 2, 3, 4, 5]
+matn = "Python"
+
+print(f"Royxat: {royxat}")
+print(f"3 in royxat: {3 in royxat
+}")
+print(f"10 in royxat: {10 in royxat}")
+print(f"10 not in royxat: {10 not in royxat}")
+
+print(f"\nMatn: '{matn}'")
+print(f"'P' in matn: {'P' in matn}")
+print(f"'x' in matn: {'x' in matn}")
+print(f"'Py' in matn: {'Py' in matn}")
+
+print("\n" + "="*60 + "\n")
+
+# 6. IDENTITY OPERATORLAR
+print("6. IDENTITY OPERATORLAR\n")
+
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+list3 = list1
+
+print(f"list1 = {list1}")
+print(f"list2 = {list2}")
+print(f"list3 = list1\n")
+
+print(f"list1 == list2: {list1 == list2} (qiymat)")
+print(f"list1 is list2: {list1 is list2} (obyekt)")
+print(f"list1 is list3: {list1 is list3} (obyekt)")
+
+print(f"\nlist1 ID: {id(list1)}")
+print(f"list2 ID: {id(list2)}")
+print(f"list3 ID: {id(list3)}")
+
+print("\n" + "="*60 + "\n")
+
+# 7. BITWISE OPERATORLAR
+print("7. BITWISE OPERATORLAR\n")
+
+m = 12  # 1100
+n = 10  # 1010
+
+print(f"m = {m} ({m:04b})")
+print(f"n = {n} ({n:04b})\n")
+
+print(f"m & n = {m & n} ({m & n:04b}) - AND")
+print(f"m | n = {m | n} ({m | n:04b}) - OR")
+print(f"m ^ n = {m ^ n} ({m ^ n:04b}) - XOR")
+print(f"~m = {~m} - NOT")
+print(f"m << 1 = {m << 1} ({m << 1:05b}) - Left shift")
+print(f"m >> 1 = {m >> 1} ({m >> 1:03b}) - Right shift")
+
+print("\n" + "="*60)
+```
+
+### 02 - O'rta darajadagi misollar
+
+```python
+# 02-orta-misollar.py
+
+"""
+OPERATORLAR - O'RTA DARAJADAGI MISOLLAR
+Real hayotiy vazifalar
+"""
+
+import math
+
+def banner(text):
+    """Chiroyli banner chiqarish"""
+    print("\n" + "="*70)
+    print(f"{text:^70}")
+    print("="*70 + "\n")
+
+# 1. KALKULYATOR DASTURI
+banner("ILMIY KALKULYATOR")
+
+def kalkulyator():
+    """Kengaytirilgan kalkulyator"""
+    
+    print("Mavjud amallar:")
+    print("1. Qo'shish (+)")
+    print("2. Ayirish (-)")
+    print("3. Ko'paytirish (*)")
+    print("4. Bo'lish (/)")
+    print("5. Butun bo'lish (//)")
+    print("6. Qoldiq (%)")
+    print("7. Daraja (**)")
+    print("8. Ildiz (sqrt)")
+    print("9. Sinus (sin)")
+    print("10. Kosinus (cos)")
+    
+    tanlov = input("\nAmal raqamini kiriting (1-10): ")
+    
+    if tanlov in ['1', '2', '3', '4', '5', '6', '7']:
+        son1 = float(input("Birinchi son: "))
+        son2 = float(input("Ikkinchi son: "))
+        
+        if tanlov == '1':
+            natija = son1 + son2
+            amal = "+"
+        elif tanlov == '2':
+            natija = son1 - son2
+            amal = "-"
+        elif tanlov == '3':
+            natija = son1 * son2
+            amal = "*"
+        elif tanlov == '4':
+            if son2 != 0:
+                natija = son1 / son2
+                amal = "/"
+            else:
+                print("❌ Xato: 0 ga bo'lish mumkin emas!")
+                return
+        elif tanlov == '5':
+            if son2 != 0:
+                natija = son1 // son2
+                amal = "//"
+            else:
+                print("❌ Xato: 0 ga bo'lish mumkin emas!")
+                return
+        elif tanlov == '6':
+            if son2 != 0:
+                natija = son1 % son2
+                amal = "%"
+            else:
+                print("❌ Xato: 0 ga bo'lish mumkin emas!")
+                return
+        elif tanlov == '7':
+            natija = son1 ** son2
+            amal = "**"
+        
+        print(f"\n✅ Natija: {son1} {amal} {son2} = {natija}")
+    
+    elif tanlov == '8':
+        son = float(input("Son kiriting: "))
+        if son >= 0:
+            natija = math.sqrt(son)
+            print(f"\n✅ √{son} = {natija}")
+        else:
+            print("❌ Xato: Manfiy sondan ildiz olib bo'lmaydi!")
+    
+    elif tanlov == '9':
+        burchak = float(input("Burchak (gradus): "))
+        radian = math.radians(burchak)
+        natija = math.sin(radian)
+        print(f"\n✅ sin({burchak}°) = {natija:.4f}")
+    
+    elif tanlov == '10':
+        burchak = float(input("Burchak (gradus): "))
+        radian = math.radians(burchak)
+        natija = math.cos(radian)
+        print(f"\n✅ cos({burchak}°) = {natija:.4f}")
+    
+    else:
+        print("❌ Noto'g'ri tanlov!")
+
+kalkulyator()
+
+# 2. YOSH VA RUXSAT TEKSHIRUVCHI
+banner("YOSH VA RUXSAT TEKSHIRUVCHI")
+
+def yosh_tekshir():
+    """Yoshga qarab ruxsatlarni aniqlash"""
+    
+    ism = input("Ismingiz: ")
+    yosh = int(input("Yoshingiz: "))
+    
+    print(f"\n{'='*50}")
+    print(f"Ism: {ism}")
+    print(f"Yosh: {yosh}")
+    print(f"{'='*50}\n")
+    
+    # Kategoriya aniqlash
+    if yosh < 0 or yosh > 150:
+        print("❌ Noto'g'ri yosh!")
+        return
+    elif yosh < 7:
+        kategoriya = "Maktabgacha"
+    elif yosh < 18:
+        kategoriya = "Voyaga yetmagan"
+    elif yosh < 65:
+        kategoriya = "Kattalar"
+    else:
+        kategoriya = "Pensioner"
+    
+    print(f"📊 Kategoriya: {kategoriya}\n")
+    
+    # Ruxsatlar
+    print("🔐 RUXSATLAR:\n")
+    
+    # Haydovchilik guvohnomasi
+    if yosh >= 18:
+        print("✅ Haydovchilik guvohnomasi olish mumkin")
+    else:
+        print(f"❌ Haydovchilik guvohnomasi ({18 - yosh} yildan keyin)")
+    
+    # Ovoz berish
+    if yosh >= 18:
+        print("✅ Saylovlarda ovoz berish mumkin")
+    else:
+        print(f"❌ Saylovlarda ovoz berish ({18 - yosh} yildan keyin)")
+    
+    # Alkogol
+    if yosh >= 21:
+        print("✅ Alkogol sotib olish mumkin")
+    else:
+        print(f"❌ Alkogol sotib olish ({21 - yosh} yildan keyin)")
+    
+    # Pensiya
+    if yosh >= 65:
+        print("✅ Pensiya olish mumkin")
+    else:
+        print(f"ℹ️  Pensiya ({65 - yosh} yildan keyin)")
+    
+    # Chegirmalar
+    if yosh < 18 or yosh >= 65:
+        print("✅ Transport va kinoda chegirma bor")
+    else:
+        print("ℹ️  Transport va kinoda chegirma yo'q")
+
+yosh_tekshir()
+
+# 3. PAROL KUCHINI TEKSHIRISH
+banner("PAROL KUCHI TEKSHIRUVCHI")
+
+def parol_kuchi_tekshir():
+    """Parol kuchini batafsil tahlil qilish"""
+    
+    parol = input("Parol kiriting: ")
+    
+    # Statistika
+    uzunlik = len(parol)
+    katta_harf = sum(1 for c in parol if c.isupper())
+    kichik_harf = sum(1 for c in parol if c.islower())
+    raqam = sum(1 for c in parol if c.isdigit())
+    maxsus = sum(1 for c in parol if c in "!@#$%^&*()_+-=[]{}|;:,.<>?")
+    
+    print(f"\n{'='*50}")
+    print("PAROL TAHLILI")
+    print(f"{'='*50}\n")
+    
+    # Uzunlik
+    print(f"📏 Uzunlik: {uzunlik} belgi")
+    if uzunlik >= 12:
+        print("   ✅ Juda yaxshi uzunlik")
+    elif uzunlik >= 8:
+        print("   ⚠️  O'rta uzunlik (12+ tavsiya etiladi)")
+    else:
+        print("   ❌ Juda qisqa (8+ kerak)")
+    
+    # Katta harf
+    print(f"\n🔤 Katta harflar: {katta_harf} ta")
+    if katta_harf > 0:
+        print("   ✅ Katta harf bor")
+    else:
+        print("   ❌ Katta harf yo'q")
+    
+    # Kichik harf
+    print(f"\n🔡 Kichik harflar: {kichik_harf} ta")
+    if kichik_harf > 0:
+        print("   ✅ Kichik harf bor")
+    else:
+        print("   ❌ Kichik harf yo'q")
+    
+    # Raqam
+    print(f"\n🔢 Raqamlar: {raqam} ta")
+    if raqam > 0:
+        print("   ✅ Raqam bor")
+    else:
+        print("   ❌ Raqam yo'q")
+    
+    # Maxsus belgi
+    print(f"\n⚡ Maxsus belgilar: {maxsus} ta")
+    if maxsus > 0:
+        print("   ✅ Maxsus belgi bor")
+    else:
+        print("   ❌ Maxsus belgi yo'q")
+    
+    # Umumiy ball (100 ball tizimida)
+    ball = 0
+    
+    # Uzunlik (40 ball)
+    if uzunlik >= 16:
+        ball += 40
+    elif uzunlik >= 12:
+        ball += 30
+    elif uzunlik >= 8:
+        ball += 20
+    else:
+        ball += uzunlik * 2
+    
+    # Katta harf (15 ball)
+    if katta_harf > 0:
+        ball += 15
+    
+    # Kichik harf (15 ball)
+    if kichik_harf > 0:
+        ball += 15
+    
+    # Raqam (15 ball)
+    if raqam > 0:
+        ball += 15
+    
+    # Maxsus belgi (15 ball)
+    if maxsus > 0:
+        ball += 15
+    
+    # Natija
+    print(f"\n{'='*50}")
+    print(f"UMUMIY BALL: {ball}/100")
+    print(f"{'='*50}\n")
+    
+    # Xulosa
+    if ball >= 80:
+        print("🔒 JUDA KUCHLI PAROL!")
+        print("   Ajoyib! Parolingiz juda xavfsiz.")
+    elif ball >= 60:
+        print("✅ YAXSHI PAROL")
+        print("   Yaxshi parol, lekin yanada yaxshiroq qilish mumkin.")
+    elif ball >= 40:
+        print("⚠️  O'RTA PAROL")
+        print("   Parolingizni kuchliroq qiling!")
+    else:
+        print("❌ ZAIF PAROL!")
+        print("   Juda xavfli! Yangi parol o'ylab toping!")
+    
+    # Tavsiyalar
+    print("\n💡 TAVSIYALAR:")
+    if uzunlik < 12:
+        print("   - Kamida 12 belgi ishlatish")
+    if katta_harf == 0:
+        print("   - Katta harflar qo'shish (A-Z)")
+    if kichik_harf == 0:
+        print("   - Kichik harflar qo'shish (a-z)")
+    if raqam == 0:
+        print("   - Raqamlar qo'shish (0-9)")
+    if maxsus == 0:
+        print("   - Maxsus belgilar qo'shish (!@#$%^&*)")
+    
+    # Oddiy parollar tekshirish
+    oddiy_parollar = [
+        'password', '12345678', 'qwerty', 'abc123', 
+        'password123', 'admin', 'letmein', 'welcome'
+    ]
+    
+    if parol.lower() in oddiy_parollar:
+        print("\n⚠️⚠️⚠️  OGOHLANTIRISH! ⚠️⚠️⚠️")
+        print("Bu parol juda oddiy va mashhur!")
+        print("Hackerlar bir zumda topib olishi mumkin!")
+
+parol_kuchi_tekshir()
+
+# 4. BMI KALKULYATOR
+banner("BMI KALKULYATOR")
+
+def bmi_kalkulyator():
+    """BMI hisoblash va tavsiyalar"""
+    
+    print("Body Mass Index (BMI) kalkulyatori\n")
+    
+    vazn = float(input("Vazningiz (kg): "))
+    boy = float(input("Bo'yingiz (metr): "))
+    
+    # BMI hisoblash
+    bmi = vazn / (boy ** 2)
+    
+    # Ideal vazn
+    ideal_vazn_min = 18.5 * (boy ** 2)
+    ideal_vazn_max = 24.9 * (boy ** 2)
+    
+    print(f"\n{'='*60}")
+    print("NATIJALAR")
+    print(f"{'='*60}\n")
+    
+    print(f"📊 Sizning BMI: {bmi:.2f}")
+    print(f"⚖️  Ideal vazn oralig'i: {ideal_vazn_min:.1f} - {ideal_vazn_max:.1f} kg\n")
+    
+    # Kategoriya aniqlash
+    if bmi < 16:
+        kategoriya = "Jiddiy ozg'inlik"
+        emoji = "🚨"
+        xavf = "Juda yuqori"
+        rang = "Qizil"
+    elif bmi < 17:
+        kategoriya = "O'rtacha ozg'inlik"
+        emoji = "⚠️"
+        xavf = "Yuqori"
+        rang = "To'q sariq"
+    elif bmi < 18.5:
+        kategoriya = "Engil ozg'inlik"
+        emoji = "⚠️"
+        xavf = "O'rta"
+        rang = "Sariq"
+    elif bmi < 25:
+        kategoriya = "Normal (sog'lom)"
+        emoji = "✅"
+        xavf = "Past"
+        rang = "Yashil"
+    elif bmi < 30:
+        kategoriya = "Ortiqcha vazn"
+        emoji = "⚠️"
+        xavf = "O'rta"
+        rang = "Sariq"
+    elif bmi < 35:
+        kategoriya = "1-darajali semizlik"
+        emoji = "⚠️"
+        xavf = "Yuqori"
+        rang = "To'q sariq"
+    elif bmi < 40:
+        kategoriya = "2-darajali semizlik"
+        emoji = "🚨"
+        xavf = "Juda yuqori"
+        rang = "Qizil"
+    else:
+        kategoriya = "3-darajali semizlik (ekstrem)"
+        emoji = "🚨"
+        xavf = "Ekstrem yuqori"
+        rang = "To'q qizil"
+    
+    print(f"{emoji} Kategoriya: {kategoriya}")
+    print(f"📈 Xavf darajasi: {xavf}")
+    print(f"🎨 Rang: {rang}\n")
+    
+    # Vazn farqi
+    if bmi < 18.5:
+        farq = ideal_vazn_min - vazn
+        print(f"📉 Ideal vazndan {farq:.1f} kg kam")
+        print(f"   Maqsad: {farq:.1f} kg olish\n")
+    elif bmi > 24.9:
+        farq = vazn - ideal_vazn_max
+        print(f"📈 Ideal vazndan {farq:.1f} kg ko'p")
+        print(f"   Maqsad: {farq:.1f} kg yo'qotish\n")
+    else:
+        print("✅ Siz ideal vazn oralig'idasiz!\n")
+    
+    # Tavsiyalar
+    print(f"{'='*60}")
+    print("TAVSIYALAR")
+    print(f"{'='*60}\n")
+    
+    if bmi < 18.5:
+        print("📋 OVQATLANISH:")
+        print("   - Kaloriya iste'molini oshiring")
+        print("   - Protein va yog'larni ko'proq iste'mol qiling")
+        print("   - Kichik-kichik, lekin tez-tez ovqatlaning (5-6 marta)")
+        print("\n💪 MASHQLAR:")
+        print("   - Og'irlik ko'tarish (strength training)")
+        print("   - Mushak qurish mashqlari")
+        print("   - Yogurt qiling va dam oling")
+        
+    elif bmi >= 25:
+        print("📋 OVQATLANISH:")
+        print("   - Kaloriya iste'molini kamaytiring")
+        print("   - Ko'proq sabzavot va mevalar")
+        print("   - Tez-tez ovqatlanishdan qoching")
+        print("   - Shakar va yog'li ovqatlarni cheklang")
+        print("\n💪 MASHQLAR:")
+        print("   - Kuniga 30-60 daqiqa yugurishlar")
+        print("   - Kardio mashqlar (yugurish, suzish)")
+        print("   - Hafta 150+ daqiqa jismoniy faollik")
+        
+    else:
+        print("✅ Sog'lom turmush tarzingizni davom ettiring!")
+        print("\n📋 OVQATLANISH:")
+        print("   - Muvozanatli ovqatlanish")
+        print("   - Yetarli suv iste'mol qiling (2-3 litr)")
+        print("\n💪 MASHQLAR:")
+        print("   - Hafta 150 daqiqa o'rtacha intensivlik")
+        print("   - 2-3 marta mushak mashqlari")
+    
+    print(f"\n⚕️  ESLATMA: Jiddiy holatda shifokor bilan maslahatlashing!\n")
+
+bmi_kalkulyator()
+
+# 5. VAQT VA SANA OPERATSIYALARI
+banner("VAQT KONVERTOR")
+
+def vaqt_konvertor():
+    """Vaqtni turli birliklarga o'tkazish"""
+    
+    print("Vaqtni turli birliklarga o'tkazish\n")
+    print("1. Sekunddan boshqa birliklarga")
+    print("2. Daqiqadan boshqa birliklarga")
+    print("3. Soatdan boshqa birliklarga")
+    print("4. Kundan boshqa birliklarga")
+    
+    tanlov = input("\nTanlov (1-4): ")
+    
+    if tanlov == '1':
+        sekund = float(input("Sekund: "))
+        
+        daqiqa = sekund / 60
+        soat = sekund / 3600
+        kun = sekund / 86400
+        hafta = sekund / 604800
+        
+        print(f"\n{sekund} sekund =")
+        print(f"   {daqiqa:.2f} daqiqa")
+        print(f"   {soat:.2f} soat")
+        print(f"   {kun:.4f} kun")
+        print(f"   {hafta:.6f} hafta")
+        
+    elif tanlov == '2':
+        daqiqa = float(input("Daqiqa: "))
+        
+        sekund = daqiqa * 60
+        soat = daqiqa / 60
+        kun = daqiqa / 1440
+        
+        print(f"\n{daqiqa} daqiqa =")
+        print(f"   {sekund:.0f} sekund")
+        print(f"   {soat:.2f} soat")
+        print(f"   {kun:.4f} kun")
+        
+    elif tanlov == '3':
+        soat = float(input("Soat: "))
+        
+        sekund = soat * 3600
+        daqiqa = soat * 60
+        kun = soat / 24
+        hafta = soat / 168
+        
+        print(f"\n{soat} soat =")
+        print(f"   {sekund:.0f} sekund")
+        print(f"   {daqiqa:.0f} daqiqa")
+        print(f"   {kun:.2f} kun")
+        print(f"   {hafta:.4f} hafta")
+        
+    elif tanlov == '4':
+        kun = float(input("Kun: "))
+        
+        sekund = kun * 86400
+        daqiqa = kun * 1440
+        soat = kun * 24
+        hafta = kun / 7
+        oy = kun / 30
+        yil = kun / 365
+        
+        print(f"\n{kun} kun =")
+        print(f"   {sekund:.0f} sekund")
+        print(f"   {daqiqa:.0f} daqiqa")
+        print(f"   {soat:.0f} soat")
+        print(f"   {hafta:.2f} hafta")
+        print(f"   {oy:.2f} oy")
+        print(f"   {yil:.2f} yil")
+    
+    else:
+        print("Noto'g'ri tanlov!")
+
+vaqt_konvertor()
+```
